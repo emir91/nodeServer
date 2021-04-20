@@ -10,4 +10,4 @@ const checkParamLength = (req, res, next) => {
     next();
 }
 
-module.exports = { log, checkParamLength };
+export { log, checkParamLength }

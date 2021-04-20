@@ -1,5 +1,5 @@
-const { root, text, html } = require('./controller');
-const { log, checkParamLength } = require('./middlewares');
+import { root, text, html } from './controller';
+import { log, checkParamLength } from './middlewares';
 
 const router = app => {
     app.get('/', log, root);
@@ -11,4 +11,4 @@ const router = app => {
     app.get('/html/:param', log, checkParamLength, html);
 }
 
-module.exports = router;
+export default router

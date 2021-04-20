@@ -7,5 +7,14 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'main.js'
     },
-    externals: [nodeExternals()]
+    externals: [nodeExternals()],
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/, 
+                use: ['babel-loader']
+            }
+        ]
+    }
 }
